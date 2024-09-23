@@ -45,9 +45,9 @@ class SystemTrayApp(QApplication):
     def Toggle(self, state):
 
         url = 'https://developer-api.govee.com/v1/devices/control'
-        api_token = "f4c05368-176f-4f85-a32e-1f475cfdd302"
-        device_mac = "DB:B4:D6:31:30:30:58:7F"
-        device_model = "H6054"
+        api_token = "REDACTED"
+        device_mac = "REDACTED"
+        device_model = "REDACTED"
 
         headers = {
             "Govee-API-Key": f"{api_token}"
@@ -78,7 +78,7 @@ class SystemTrayApp(QApplication):
     
         try:
             response = requests.put(url, headers=headers, json=body)
-            response.raise_for_status()  # Raise an exception for non-2xx status codes
+            response.raise_for_status()
             print("Device state successfully updated!")
         except requests.exceptions.RequestException as e:
             print(f"Error making API request: {e}")

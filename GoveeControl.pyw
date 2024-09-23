@@ -47,7 +47,7 @@ class SystemTrayApp(QApplication):
         url = 'https://developer-api.govee.com/v1/devices/control'
         api_token = "REDACTED"
         device_mac = "REDACTED"
-        device_model = REDACTED
+        device_model = "REDACTED"
 
         headers = {
             "Govee-API-Key": f"{api_token}"
